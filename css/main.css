@@ -10,14 +10,44 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 30px;
+    padding: 0 30px;
 }
 
 .form{
     padding-top: 10px;
 }
+.form_input{
+    padding: 5px 0;
+}
 
 .search_result{
     background-color: pink;
-    height: 70vh;
+    padding: 0 30px;
+}
+
+.search_list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 20px;
+} 
+
+.form_btn {
+    padding: 5px 5px;
+}
+.search_item{
+    list-style: none;
+    padding: 10px 10px;
+    
+}
+
+.search_img{
+    border-radius: 10px;
+}
+
+/* FAVORITES */
+.js-favorite{
+    background-color: yellow;
+    color: hotpink;
+    color: blue;
 }
