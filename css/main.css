@@ -1,0 +1,23 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.main{
+    background-color: #3333;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.form{
+    padding-top: 10px;
+}
+
+.search_result{
+    background-color: pink;
+    height: 70vh;
+}
