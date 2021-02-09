@@ -31,6 +31,14 @@ function addEventFavourites() {
 }  
 
 // functions: //
+function eliminateFavorite() {
+    allFavourites.addEventListener("click", function (event) {
+        event.currentTarget.classList.remove("js-favourite");
+    });
+   
+        
+}
+
 function addToFavourites(name, showHTML) { 
     let allFavourites = JSON.parse(localStorage.getItem("favourites"));
     if (allFavourites == null) {
