@@ -5,6 +5,9 @@ const btnElement = document.querySelector('.js-form_btn');
 const searchUrlAPI = "http://api.tvmaze.com/search/shows?q=";
 const defaultImageHTML = '<img class="search_img" src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV" />';
 
+// array
+let allFavourites = {};
+
 // btn prevent default:
 function resetBehaviorsButton() {
     document.querySelector(".js-form_btn").addEventListener("click",
@@ -19,17 +22,27 @@ function addEventSearcher() {
   btnElement.addEventListener("click", inputSearchValue);
 }
 
-function addEventFavorites() {
+function addEventFavourites() {
     const resultItems = document.querySelectorAll(".search_item");
     for (const item of resultItems) {
        item.addEventListener("click",
         function (event) {
-            event.currentTarget.classList.toggle("js-favorite");
+            event.currentTarget.classList.toggle("js-favourite");
+            allFavourites[item.querySelector('p').innerText]=item.innerHTML;
+            refreshFavoutites();
         });
-    }  
-}
+    }
+}  
+
 
 // functions: //
+function refreshFavoutites() { 
+    const listFavourite = document.querySelector('.js-favourites_list');
+    listFavourite.innerHTML = "";
+    for (const favourite in allFavourites) { 
+        listFavourite.innerHTML += allFavourites[favourite];
+    }   
+};
 
 function searchShows(search) {
     fetch(searchUrlAPI+search)
@@ -45,7 +58,7 @@ function searchShows(search) {
         }
         const list = document.querySelector('.js-search_list');
         list.innerHTML = html; 
-        addEventFavorites();
+        addEventFavourites();
     })
 }
 

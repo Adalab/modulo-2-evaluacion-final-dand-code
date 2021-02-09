@@ -5,7 +5,7 @@
 }
 
 .main{
-    background-color: #3333;
+    background-color: #504C99;
     height: 30vh;
     display: flex;
     flex-direction: column;
@@ -19,10 +19,18 @@
 .form_input{
     padding: 5px 0;
 }
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 
+}
+.favourites{
+    background-color: #C6C9E1;
+    padding: 10px 30px;
+}
 .search_result{
-    background-color: pink;
-    padding: 0 30px;
+    background-color: #B4D0B2;
+    padding: 0 50px 0 50px;
 }
 
 .search_list{
@@ -34,6 +42,8 @@
 
 .form_btn {
     padding: 5px 5px;
+    background-color: #C27847;
+    border-style:groove;
 }
 .search_item{
     list-style: none;
@@ -45,9 +55,14 @@
     border-radius: 10px;
 }
 
+
+
 /* FAVORITES */
-.js-favorite{
-    background-color: yellow;
-    color: hotpink;
+.js-favourite{
+    background-color: #C27847;
     color: blue;
+}
+
+.hidden{
+    display: none;
 }
