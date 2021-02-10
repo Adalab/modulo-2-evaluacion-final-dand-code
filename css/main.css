@@ -30,8 +30,7 @@
 
 .form_btn {
     width: 120px;
-    position: absolute;
-    left: 430px;
+    
     padding: 8px 12px;
     border-radius: 15px;
     background-color: #C27847;
@@ -46,6 +45,13 @@
 }
 .favourites{
     padding: 10px 30px;
+}
+.js-favourites_list{
+    list-style: none;
+    padding-top: 10px;
+}
+.favourite_item{
+    padding-top: 15px;
 }
 .search_result{
     padding: 0 50px 0 50px;
@@ -65,8 +71,17 @@
     border-radius: 10px;
 }
 
+.reset{
+    margin-top: 20px;;
+    width: 120px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    background-color: #3333;
+}
+
 /* FAVORITES */
 .js-favourite{
-    background-color: #C27847;
-    color: blue;
+    background-color: black;
+    color: white;
+    
 }
