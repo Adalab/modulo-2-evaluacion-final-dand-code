@@ -4,65 +4,69 @@
     box-sizing:border-box;
 }
 
+
 .main{
-    background-color: #504C99;
+    background-color: #5e41e4;
     height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 30px;
+    color: white;
 }
-
+/* Search form */
 .form{
     padding-top: 10px;
 }
 .form_input{
-    padding: 5px 0;
+    padding: 8px 20px;
+    width: 370px;
+    border-radius: 15px;
 }
+.form_input::placeholder{
+    text-align: center;
+    font-size: 18px;
+}
+
+.form_btn {
+    width: 120px;
+    position: absolute;
+    left: 430px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    background-color: #C27847;
+    border-style:groove;
+}
+
+/* Results section*/
 .container{
     display: grid;
     grid-template-columns: 1fr 2fr;
 
 }
 .favourites{
-    background-color: #C6C9E1;
     padding: 10px 30px;
 }
 .search_result{
-    background-color: #B4D0B2;
     padding: 0 50px 0 50px;
 }
-
 .search_list{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 0 20px;
 } 
-
-.form_btn {
-    padding: 5px 5px;
-    background-color: #C27847;
-    border-style:groove;
-}
 .search_item{
     list-style: none;
     padding: 10px 10px;
     
 }
-
 .search_img{
     border-radius: 10px;
 }
-
-
 
 /* FAVORITES */
 .js-favourite{
     background-color: #C27847;
     color: blue;
-}
-
-.hidden{
-    display: none;
 }
