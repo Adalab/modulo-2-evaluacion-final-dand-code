@@ -5,6 +5,7 @@ const btnElement = document.querySelector('.js-form_btn');
 const btnReset = document.querySelector('.reset');
 const searchUrlAPI = "//api.tvmaze.com/search/shows?q=";
 const defaultImageHTML = '<img class="search_img" src="//via.placeholder.com/210x295/ffffff/666666/?text=TV" />';
+const logElement = document.querySelector('.js-form_log');
 
 //Arrays
 let searchItems = [];
@@ -101,6 +102,7 @@ function serieHTML(data) {
     for (const item of data) {
         html +=  '<li class="search_item">'
         html += `<p class="search_item-title">${item.show.name}</p>`;
+        html += `<p class="search_item-title">${item.show.schedule.days}</p>`;
         html += imageHTML(item);
         html += '</li>';
         searchItems.push(item);
@@ -130,6 +132,20 @@ function searchShows(search) {
 
 // SEARCH INPUT //
 
+function handleLog() {
+    for (const item of searchItems) {
+        console.log(item.show.name);
+    }
+}
+
+function resetButtonLog() {
+    document.querySelector(".js-form_log").addEventListener("click",
+        function (event) {
+            event.preventDefault()
+        });
+}
+
+
 function inputSearchValue() {
     const search = document.querySelector('.js-input').value;
     if (search !== '') {
@@ -142,8 +158,10 @@ function init() {
     resetBehaviorsButton();
     addEventSearcher();
     refreshFavoutites();
+    resetButtonLog()
 
     btnReset.addEventListener("click", clearFavourites);
+    logElement.addEventListener("click", handleLog);
 }
 
 init();
